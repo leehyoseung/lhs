@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        width: 1920px;
+    }
+    *{
+    margin: 0;
+    padding: 0;}
+    #headbox{
+        display: inline-block;
+    text-align: center;
+    /* border: solid 1px red; */
+    width: 1920px;
+    height: 1280px;
+    margin: auto;
+    height: auto;
+    position: relative;
+    }
+    .span1{
+        position: absolute;
+        top: 43px;
+        display: flex;
+        left: 5%;
+        color: wheat;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        transform: translate(-50%,0);
+    }
+    ul{
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        list-style-type: none;
+        display: flex;
+        color: white;
+        transform: translate(-50%,0);
+    }
+    li{
+        margin: 25px;
+        font-size: 16px;
+    }
+    .input1{
+        position: absolute;
+        display: flex;
+        top: 43px;
+        right: 5%;
+        border-radius: 20px;
+        border-color: ;
+        height: 30px;
+        width: 200px;
+        border: solid 1px white;
+        background-color: transparent;
+        background-image: url(img/돋보기.png);
+        background-repeat:no-repeat;
+        background-position: right 10px center; 
+        
+    }
+    .input1::placeholder{
+        color: white;
+        font-weight: bold;
+    }
+    .hr1{
+        position: absolute;
+        width: 1920px;
+        /* height: 1px; */
+        top: 100px;
+        color: white;
+    }
+    .span2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+    }
+    .span3{
+        position: absolute;
+        bottom: 300px;
+        left: 300px;
+        color: white;
+        font-weight: bold;
+        text-align: left;
+        font-size: 24px;
+    }
+    .inputbox2{
+        position: absolute;
+        bottom: 260px;
+        left: 300px;
+        }
+        .input2{
+            width: 205px;
+            font-weight: bold;
+            background-color: transparent;
+            border: solid 1px white;
+            border-radius: 30px;
+            text-align: center;
+            height: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            /* color: white; */
+        }
+        .input2::placeholder{
+            color: white;
+        }
+        #bodybox1{
+            /* border: solid 1px red; */
+            margin-top: 200px;
+            position: relative;
+            opacity: 0; 
+            /* 초기에 숨기기 */
+            transition: opacity 2s ease-in-out;
+            /* 투명도를 변경할때 초동안 이징효과 */
+        }
+        #bodybox1.show{
+            opacity: 2;
+            /* 요소 보여주기 */
+        }
+        .span4{
+        position: absolute;
+        top: 0;
+        left: 58%;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 1.8;
+        }
+        .p5, .p4,.p3, .p6{background-color: yellow;}
+        #menu1{
+            z-index: 10000;
+            cursor: pointer;
+            position: fixed;
+            right: 5%;
+            bottom: 3%;
+            /* line-height: 1.5; */
+        }
+        #menu2{
+            z-index: 10000;
+        cursor: pointer;
+            position: fixed;
+            right: 1%;
+            bottom: 3%;
+        }
+        #bodybox2{
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            margin-top: 200px;
+            position: relative;
+            /* line-height: -15px; */
+            }
+        #bodybox2.show{
+            opacity: 2;
+        }
+        .img3{
+            float: right;
+        }    
+        .span5{
+            position: absolute;
+            top: 0;
+            right: 58%;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.8;
+            }
+            /* p{line-height: 1.8;} */
+            
+    </style>
+</head>
+<body>
+    <div id="headbox">
+        <img src="img/메인 첫 배너.png" alt="">
+        <span class="span1">비전윅스</span>
+        <ul>
+        <li>Home</li>
+        <li>Services</li>
+        <li>About</li>
+        <li>Team</li>
+        <li>FAQ</li>
+        <li>Resources</li>
+        </ul>
+        <hr class="hr1">
+        <div class="inputbox">
+        <input type="text" placeholder= "&nbsp;&nbsp;검색" class="input1">
+        </div>
+        <p><span class="span2">전략적 컨설팅으로 성공을 이끄는 길</span></p>
+        <p class="span3">컨설팅<br>혁신의 공식<br>전략적 컨설팅으로<br>미래를 형성하세요.</p>
+        <div class="inputbox2">
+        <input type="text" placeholder="무료 상담 신청" class="input2">
+        </div>
+        </div>
+        <div id="bodybox1">
+        <img class="img2" src="img/두번째 사진.png" alt="">
+        <p class="span4">비전윅스는 전략적<br>
+            <span class="p1">컨설팅으로 기업의</span><br>
+            <span class="p2">성장과 혁신을 이끌어냅니다.</span> <br><br>
+            <span class="p3">우리는 현 상황을 분석하고</span><br>
+            <span class="p4">적절한 전략을 제시하여</span><br>
+            <span class="p5">고객의 비즈니스 성과를 극대화합니다.</span>
+        </p>
+        </div>
+        <a href="#"><div id="menu1"><img src="img/위로가기.png" alt=""></div></a>
+        <div id="menu2"><img src="img/카톡 로고.png" alt=""></div>
+        <div id="bodybox2">
+            <img class="img3" src="/img/세번째.png" alt="">
+            <p class=" span5">고객의 요구에 맞는 전략을 제시하고<br>
+            <span class="p6">문제를 해결하기 위한 해격책을 찾습니다.</span></p>
+        </div>
+
+
+        <script>
+            // 요소를 나타나게 하는 함수
+            function showElement1() {
+                var element = document.getElementById('bodybox1');
+                element.classList.add('show');
+            }
+        
+            // 요소를 숨기는 함수
+            function hideElement1() {
+                var element = document.getElementById('bodybox1');
+                element.classList.remove('show');
+            }
+        
+            // 스크롤 이벤트를 감지하여 요소를 나타나게 하는 함수를 호출
+            window.addEventListener('scroll', function() {
+                var element = document.getElementById('bodybox1');
+                var position = element.getBoundingClientRect();
+        
+                // 요소가 화면에 보일 때 요소를 나타나게 하는 함수를 호출
+                if (position.top < window.innerHeight && position.bottom >= 0) {
+                    showElement1();
+                } else {
+                    hideElement1();
+                }
+            });
+            
+                                // 요소를 나타나게 하는 함수
+                                function showElement2() {
+                        var element = document.getElementById('bodybox2');
+                        element.classList.add('show');
+                    }
+                
+                    // 요소를 숨기는 함수
+                    function hideElement2() {
+                        var element = document.getElementById('bodybox2');
+                        element.classList.remove('show');
+                    }
+                
+                    // 스크롤 이벤트를 감지하여 요소를 나타나게 하는 함수를 호출
+                    window.addEventListener('scroll', function() {
+                        var element = document.getElementById('bodybox2');
+                        var position = element.getBoundingClientRect();
+                
+                        // 요소가 화면에 보일 때 요소를 나타나게 하는 함수를 호출
+                        if (position.top < window.innerHeight && position.bottom >= 0) {
+                            showElement2();
+                        } else {
+                            hideElement2();
+                        }
+                    });
+                    
+
+        </script>
+
+</body>
+
+</html>
